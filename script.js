@@ -52,7 +52,11 @@ const elements = ['we', 'are', 'family'];
 
 console.log(elements.join(' '));//加入，将数组改成字符串，改变原数组
 
-
+let a = [1,2,3,4,5,6];
+let sum = a.reduce((acc,itme)=>{
+  return acc + itme;
+},0)
+console.log(sum);//数组累加，三个参数，第一个是累加器，第二个是数组元素，第三个是初始值。不改变原数组
 
 let h = [1,2,3,4,5]
 //console.log(h.isArray(h))
@@ -62,6 +66,10 @@ console.log(h.some(itme=>itme>4))//有一个元素符合条件返回布尔值，
 console.log(h.every(itme=>itme>1))//每一个元素都符合条件，返回布尔值，不改变数组，回调函数
 console.log(h.fill(0,2,3))
 console.log(h)//填充函数，第一个参数为填充元素，第二个参数为开始填充位置但不包括，第三个参数为结束位置。改变原数组
+let a = [1,2,3,4,5,6,7,8,9];
+let b = a.copyWithin(3,2,5)
+console.log(b)
+console.log(a)//内复制，三个参数，第一个是复制数组放入的位置，第二个是复制数组的第一个索引位置，第三个是复制数组的第二个索引位置，左闭右开，不改变数组
 
 //第二题
 let object1 = {};
